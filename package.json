@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "antd": "^3.5.1",
+    "javascript-i18n-library": "^1.6.0",
     "react": "^16.3.2",
+    "react-big-calendar": "^0.19.1",
     "react-dom": "^16.3.2",
     "react-scripts": "1.1.4",
     "reactstrap": "^6.0.1"
