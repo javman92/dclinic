@@ -22,30 +22,80 @@ const menu = (
     <Menu.Item key="3">La Serena</Menu.Item>
   </Menu>
 );
+
+const especialidades = (
+  <Menu onClick={handleMenuClick}>
+    <Menu.Item key="1">Medicina general</Menu.Item>
+    <Menu.Item key="2">Odontología</Menu.Item>
+    <Menu.Item key="3">Nutricionista</Menu.Item>
+  </Menu>
+);
+const medicos = (
+  <Menu onClick={handleMenuClick}>
+    <Menu.Item key="1">Juan Osvaldo</Menu.Item>
+    <Menu.Item key="2">Pedro Barriga</Menu.Item>
+    <Menu.Item key="3">Paloma Pé</Menu.Item>
+  </Menu>
+);
+
 class Select extends Component {
   render() {
     return (
      <div>
-    
+    <span>
+        <br />
+    </span>
         <Row>
         
-        <Col  >
-         Seleccione sucursal </Col>
-      <Col span={2}  > 
-
-    <Dropdown overlay={menu}>
-      <Button style={{ marginLeft: 2 }}>
-        Ciudad <Icon type="down" />
-      </Button>
-    </Dropdown></Col>
-    <Col > <Button type="primary" >Mapa</Button></Col>
-    </Row>
+            <Col  >
+                Seleccione sucursal 
+            </Col>
+            <Col span={2}  > 
+                <Dropdown overlay={menu}>
+                  <Button style={{ marginLeft: 2 }}>
+                        Ciudad <Icon type="down" />
+                  </Button>
+                </Dropdown>
+            </Col>
+            <Col >
+                 <Button type="primary" >Mapa</Button>
+            </Col>
+        </Row>
     
 
     <Row>
-        <Col  ></Col>
-        <Col >Pedir hora con especialista</Col>
+        <span> <br /></span>
+        <Col >Especialidad</Col>
 
+    </Row>
+
+    <Row>
+        
+            
+            <Col span={2}  > 
+                <Dropdown overlay={especialidades}>
+                  <Button style={{ marginLeft: 2 }}>
+                        Especialidad <Icon type="down" />
+                  </Button>
+                </Dropdown>
+            </Col>
+            
+    </Row>
+
+    <span>
+        <br />
+    </span>
+    <Row>
+            <Col >Médico</Col>
+            
+            <Col span={2}  > 
+                <Dropdown overlay={medicos}>
+                  <Button style={{ marginLeft: 2 }}>
+                        Médico <Icon type="down" />
+                  </Button>
+                </Dropdown>
+            </Col>
+            
     </Row>
 
 
