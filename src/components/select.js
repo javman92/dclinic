@@ -3,6 +3,7 @@ import { Row, Col } from 'antd';
 import { Layout, Menu, Breadcrumb } from 'antd';
 import 'antd/dist/antd.css'
 import {  Dropdown, Button, Icon, message } from 'antd';
+import Calendar from "./calendar"
 const { Header, Content, Footer } = Layout;
 
 function handleButtonClick(e) {
@@ -42,6 +43,9 @@ class Select extends Component {
   render() {
     return (
      <div>
+
+     <Row>
+     <Col span={4} >
     <span>
         <br />
     </span>
@@ -53,13 +57,11 @@ class Select extends Component {
             <Col span={2}  > 
                 <Dropdown overlay={menu}>
                   <Button style={{ marginLeft: 2 }}>
-                        Ciudad <Icon type="down" />
+                        Ciudad     <Icon type="down" />
                   </Button>
                 </Dropdown>
             </Col>
-            <Col >
-                 <Button type="primary" >Mapa</Button>
-            </Col>
+           
         </Row>
     
 
@@ -97,7 +99,11 @@ class Select extends Component {
             </Col>
             
     </Row>
-
+    </Col>
+    <Col span={18}>
+    <Calendar/>
+    </Col>
+    </Row>
 
         
       </div>
