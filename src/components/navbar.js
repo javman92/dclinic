@@ -29,9 +29,9 @@ class Navi extends React.Component {
        
          
 
-        <Menu.Item  key="1">Nosotros</Menu.Item>
-        <Menu.Item span={3} key="2">Ingresar</Menu.Item>
-        <Menu.Item span={3} key="3">Registrar</Menu.Item>
+        <Menu.Item  key="1">{this.props.element1}</Menu.Item>
+        <Menu.Item span={3} key="2">{this.props.element2}</Menu.Item>
+        <Menu.Item span={3} key="3">{this.props.element3}</Menu.Item>
    
     
       </Menu>
@@ -39,7 +39,7 @@ class Navi extends React.Component {
    <header className="App-header">
        
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Bienvenido, con prácticas profesionales Udec puedes ofrecer o encontrar tu práctica perfecta.</h1>
+          <h1 className="App-title">Bienvenido a {this.props.clinicName}.</h1>
         </header>
 </div>
 

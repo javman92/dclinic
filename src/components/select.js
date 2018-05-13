@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'antd';
-import './App.css';
-import Navi from "./components/navbar"
 import { Layout, Menu, Breadcrumb } from 'antd';
 import 'antd/dist/antd.css'
 import {  Dropdown, Button, Icon, message } from 'antd';
-import Select from "./components/select"
 const { Header, Content, Footer } = Layout;
 
 function handleButtonClick(e) {
@@ -25,18 +22,37 @@ const menu = (
     <Menu.Item key="3">La Serena</Menu.Item>
   </Menu>
 );
-class App extends Component {
+class Select extends Component {
   render() {
     return (
      <div>
-      <Navi element1="Nosotros" element2="Ingresar" element3="Registro" clinicName="Megasalud"/>
-      <Select/>
+    
+        <Row>
+        
+        <Col  >
+         Seleccione sucursal </Col>
+      <Col span={2}  > 
+
+    <Dropdown overlay={menu}>
+      <Button style={{ marginLeft: 2 }}>
+        Ciudad <Icon type="down" />
+      </Button>
+    </Dropdown></Col>
+    <Col > <Button type="primary" >Mapa</Button></Col>
+    </Row>
+    
+
+    <Row>
+        <Col  ></Col>
+        <Col >Pedir hora con especialista</Col>
+
+    </Row>
 
 
-
+        
       </div>
     );
   }
 }
 
-export default App;
+export default Select;
